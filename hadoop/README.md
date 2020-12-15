@@ -87,6 +87,9 @@ $ cd /usr/local/opt/hadoop/sbin
 # start all services
 $ ./start-all.sh
 
+# Run JPS to check the services
+$ jps
+
 # to stop all services
 $ ./stop-all.sh
 

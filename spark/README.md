@@ -48,7 +48,7 @@ $ cp spark-env.sh.template spark-env.sh
 
 ```
 
-Secondly, assign the SPARK_MASTER_HOST variable with the master IP address in each machine or node.
+Secondly, assign the SPARK_MASTER_HOST variable in the spark-env.sh file with the master IP address in each machine or node.
 ```bash
 
 SPARK_MASTER_HOST=192.168.1.15

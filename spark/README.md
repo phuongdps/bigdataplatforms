@@ -89,3 +89,30 @@ $ bin/spark-submit --master spark://192.168.1.15:7077 examples/src/main/python/p
 ```
 
 For checking the status of your spark cluster, go to the URL[http://public_IP_of_Master_Node:8080].
+
+## Further configurations
+In order to start the spark cluster quickly, you can use the following scripts: start-spark-cluster.sh
+```bash
+# put these commands in start-spark-cluster.sh
+~/environments/spark/sbin/start-master.sh
+ssh node2 "source environments/myenv/bin/activate && ~/environments/spark/sbin/start-slave.sh spark://192.168.1.15:7077"
+ssh node3 "source environments/myenv/bin/activate && ~/environments/spark/sbin/start-slave.sh spark://192.168.1.15:7077"
+
+# Results
+starting org.apache.spark.deploy.master.Master, logging to /home/ubuntu/environments/spark/logs/spark-ubuntu-org.apache.spark.deploy.master.Master-1-node1.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/ubuntu/environments/spark/logs/spark-ubuntu-org.apache.spark.deploy.worker.Worker-1-node2.out
+starting org.apache.spark.deploy.worker.Worker, logging to /home/ubuntu/environments/spark/logs/spark-ubuntu-org.apache.spark.deploy.worker.Worker-1-node3.out
+```
+
+To stop the cluster, use stop-spark-cluster.sh
+```bash
+# put these commands in stop-spark-cluster.sh
+~/environments/spark/sbin/stop-master.sh
+ssh node2 ~/environments/spark/sbin/stop-slave.sh
+ssh node3 ~/environments/spark/sbin/stop-slave.sh
+
+# Results
+stopping org.apache.spark.deploy.master.Master
+stopping org.apache.spark.deploy.worker.Worker
+stopping org.apache.spark.deploy.worker.Worker
+```

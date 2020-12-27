@@ -37,11 +37,12 @@ source ~/environments/myenv/bin/activate
 Firstly, download the newest version of spark at the website[http://spark.apache.org/downloads.html]. For example, spark-3.0.1 such as follows
 ```bash
 # Install spark
+$ cd environments
 $ wget https://mirror-2.hosthink.net/apache/spark/spark-3.0.1/spark-3.0.1-bin-hadoop2.7.tgz
 $ tar zxf spark-3.0.1-bin-hadoop2.7.tgz
 $ mv spark-3.0.1-bin-hadoop2.7 spark
 
-# Configure spark conf
+# Configure spark conf for each node both master and slave are the same
 $ cd spark/conf
 $ cp spark-env.sh.template spark-env.sh
 

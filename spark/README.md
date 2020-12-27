@@ -116,3 +116,10 @@ stopping org.apache.spark.deploy.master.Master
 stopping org.apache.spark.deploy.worker.Worker
 stopping org.apache.spark.deploy.worker.Worker
 ```
+
+## Lab
+```bash
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+# Install node 14.x
+$ sudo apt-get install -y nodejs
+```

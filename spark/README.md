@@ -117,7 +117,7 @@ stopping org.apache.spark.deploy.worker.Worker
 stopping org.apache.spark.deploy.worker.Worker
 ```
 
-## Lab
+## Using Lab
 ```bash
 $ curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
 # Install node 14.x

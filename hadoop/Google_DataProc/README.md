@@ -20,7 +20,7 @@ For downloading more data, you only need to change the filename of each csv file
   done
 ```
 
-## Upload the data to Google Bucket
+## Transfer Data between your system and Google Bucket
 
 To copy the data from local system to the bucket, use the below command:
 ```bash

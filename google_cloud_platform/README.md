@@ -55,3 +55,9 @@ $ gcloud dataproc clusters create bigdata-platforms \
     
 ```
 
+## Create Google Bucket
+
+You can use gcloud to create your google bucket.
+```bash
+$ gsutil mb -b on -l us-east1 gs://my-awesome-bucket/
+```

@@ -1,4 +1,4 @@
-# Hadoop and Hive Tutorials
+# Hadoop
 
 
 ## Installation on one node

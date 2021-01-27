@@ -1,4 +1,4 @@
-# Hadoop and Hive 
+# Hadoop and Hive with Dataproc 
 
 ## Download the NewYork taxi dataset
 

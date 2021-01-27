@@ -20,19 +20,20 @@ For downloading more data, you only need to change the filename of each csv file
   done
 ```
 
-## Upload this data to google bucket
+## Upload the data to Google Bucket
 
+To copy the data from local system to the bucket, use the below command:
 ```bash
 $ gsutil cp *.csv gs://bucket_name
 ```
 
-Copy the bucket back to your system
+To copy the data from the bucket back to your system:
 ```bash
 # Copy data to your current working directory
 $ gsutil cp gs://bucket_name/yellow_tripdata_2020-02.csv ./
 ```
 
-Copy data to hadoop system
+In order to copy the data to your hadoop system:
 ```bash
 # Copy data from the bucket to your directory
 $ hdfs dfs -cp gs://bucket_name/yellow_tripdata_2020-02.csv /user/your_gmail_account_name/

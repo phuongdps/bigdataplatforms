@@ -29,3 +29,20 @@ Some useful commands for gcloud are as follows:
 
 
 ## Create service account 
+To create a service account, head to the [website](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances) and following the GUI to create a service account with Roles.
+
+Then you can setup a Dataproc for this service account such as follows:
+```bash
+
+$ gcloud dataproc clusters create cluster-name \
+    --region=region \
+    --service-account=service-account-name@project-id.iam.gserviceaccount.com \
+    --scopes=scope[, ...]
+    
+$ gcloud dataproc clusters create bigdata-platforms \
+    --region=us-east4 \
+    --service-account=service-account-name@project-id.iam.gserviceaccount.com \
+    --scopes=scope[, ...]
+    
+```
+

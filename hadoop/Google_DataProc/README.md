@@ -19,3 +19,24 @@ For downloading more data, you only need to change the filename of each csv file
   	curl -O https://s3.amazonaws.com/nyc-tlc/trip+data/yellow_tripdata_2020-$x.csv
   done
 ```
+
+## Upload this data to google bucket
+
+```bash
+$ gsutil cp *.csv gs://bucket_name
+```
+
+Copy the bucket back to your system
+```bash
+# Copy data to your current working directory
+$ gsutil cp gs://bucket_name/yellow_tripdata_2020-02.csv ./
+```
+
+Copy data to hadoop system
+```bash
+# Copy data from the bucket to your directory
+$ hdfs dfs -cp gs://bucket_name/yellow_tripdata_2020-02.csv /user/your_gmail_account_name/
+
+# Check that you have received the data you want
+$ hdfs dfs -ls /user/my_gmail_account_name
+```

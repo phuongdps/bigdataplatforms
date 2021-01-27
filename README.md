@@ -1,3 +1,3 @@
-# Big Data Platforms
+# Big Data Platform
 
-This course is about how to generate a big data platforms following requirements.
+This course is about how to generate a big data platform following requirements.

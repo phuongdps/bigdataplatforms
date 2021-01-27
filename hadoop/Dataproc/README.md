@@ -41,3 +41,9 @@ $ hdfs dfs -cp gs://bucket_name/yellow_tripdata_2020-02.csv /user/your_gmail_acc
 # Check that you have received the data you want
 $ hdfs dfs -ls /user/my_gmail_account_name
 ```
+
+## Hadoop Examples
+
+
+## Hive Examples
+
